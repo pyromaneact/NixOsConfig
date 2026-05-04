@@ -1,0 +1,4 @@
+keymap:
+        - name: main remaps
+          remap:
+            KEY_LEFTSHIFT-t: [T,e,m,p,l,a,t,e]
