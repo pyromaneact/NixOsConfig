@@ -1,0 +1,66 @@
+[sudo] password for cyber_coo: 
+warning: Git tree '/home/cyber_coo/nixOs' is dirty
+building the system configuration...
+warning: Git tree '/home/cyber_coo/nixOs' is dirty
+error: hash mismatch in fixed-output derivation '/nix/store/b9a7xlk0hq23clcqj46arcxi8j4937k5-source.drv':
+         specified: sha256-VHPG9Q1D9JQADl+MnhQeN0PLhJrspMx3qslia52ycvc=
+            got:    sha256-pcALvo+YFL/tnyl5SKGfxWdMAvnrD/cqOWxvVLcm1ZI=
+error: Cannot build '/nix/store/nw1zqzln2qfavjqb05hqagfkp2ymkg6c-chuck.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/1628j5ilj5s81ciigq243bc2hn533qqv-chuck
+error: Build failed due to failed dependency
+error: Cannot build '/nix/store/zcy0jg97ai1wi8qfik21jlgk6z5srsdf-chuck_fish-completions.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/4n2q6h8mixa99bwwk5xz12gbgxqk7i72-chuck_fish-completions
+error: Cannot build '/nix/store/9d20qshs8pxnp6x9m9k0977fv40favdx-man-paths.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/r4hg39mm5vmi3fyvg9dimqvxi7a7srp5-man-paths
+error: Cannot build '/nix/store/bksi4p78nvmiilkrvd18h1qrjvvfwsny-system-path.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/snpwr2ybz6khydylx5wkk38ndbnxm0vp-system-path
+error: Build failed due to failed dependency
+error: Build failed due to failed dependency
+error: Build failed due to failed dependency
+error: Cannot build '/nix/store/ws4p82msia3k4rgk5j1ygya9s6wnshfw-X-Restart-Triggers-polkit.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/0l0a3dq7fqakdzhqhfsbzsbc7rjzsv9g-X-Restart-Triggers-polkit
+error: Cannot build '/nix/store/0d380kvllwp8q9qjls87m5i3mqgz2sv4-dbus-1.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/8mm9hn59qcn7kpd31iwva7bqajhzv6x6-dbus-1
+error: Cannot build '/nix/store/m60ismzmvbmda324wqjq6z752rrqfv1j-etc-pam-environment.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/7v3r08jp75k6ims9xkvmyf3y0f9qvy0b-etc-pam-environment
+error: Cannot build '/nix/store/87339ynv8gyiknm7ai4f9d45v96a2nxb-etc.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/rrwv80v3081afn79biwzza3761350y3r-etc
+error: Cannot build '/nix/store/yh838zr7k3q60s92jylml29cf78yv9x7-nixos-system-nixos-26.05.20260611.a037402.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/3zm5wlywy1lljgqv6r63nnvlmm00r3f9-nixos-system-nixos-26.05.20260611.a037402
+error: Cannot build '/nix/store/krkb2bv281vkydlgkrhrljdrn20llkbj-set-environment.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/rn3vw3aaxd49c54vzsx8ariwlcjna85c-set-environment
+error: Cannot build '/nix/store/q3l48g92iii1y0hbcf1xhxgldrabrvyj-system_fish-completions.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/s746lja2vidynf3gabg7r921v4rl0006-system_fish-completions
+error: Cannot build '/nix/store/qr7wyqq9vriy8kgzx82zmdfhmfksbm9i-unit-accounts-daemon.service.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/fz8gl857wi1jh2dx28w4pa4vxm1qmvi9-unit-accounts-daemon.service
+error: Cannot build '/nix/store/7qwjh2b04x50qa0244z61y1ry1hk4kwd-unit-script-mandb-start.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/5854f4y5wq5zkcn3lpl60lcqcvhgd3qf-unit-script-mandb-start
+error: Build failed due to failed dependency
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths '/home/cyber_coo/nixOs/#nixosConfigurations."myNixos".config.system.build.toplevel' --no-link' returned non-zero exit status 1.
+

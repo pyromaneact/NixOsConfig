@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     xremap-flake.url = "github:xremap/nix-flake";
     nvf.url = "github:notashelf/nvf";
   };
@@ -28,21 +29,28 @@
         };
         modules = [
           #generic configs
-          ./config/configuration.nix
-          ./config/nividia.nix
+          ./config/hardware-configuration.nix
+          ./config/nixconfig.nix
+          ./config/audio.nix
+          ./config/visual.nix
+          #./config/configuration.nix
+          ./config/services.nix
+          #./config/nividia.nix
           #./config/genericPackage.nix
 
           #settings configs
+          ./config/alias.nix
           ./config/laptopDrivers.nix
           ./config/terminal.nix
           ./config/usr.nix
-          #./config/networking.nix
+          ./config/networking.nix
           ./config/xremap/keyboardConfig.nix
 
           #program configs
           nvf.nixosModules.default
           ./config/vulriblitys.nix
           ./config/codeConfig.nix
+          #./config/strudle.nix
           ./config/notes.nix
           ./config/presentations.nix
           ./config/comunication.nix
@@ -51,6 +59,7 @@
           ./config/cyberSecurity.nix
           ./config/game.nix
           ./config/vm.nix
+          ./config.pitrare.nix
         ];
       };
     };

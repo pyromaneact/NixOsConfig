@@ -17,7 +17,7 @@ pkgs.stdenv.mkDerivation{
       owner = "ccrma";
       repo = "chuck";
       rev = "ddd9d5cbb9d27818d4f49a287da2662f5554c147";
-      sha256 = "sha256-VHPG9Q1D9JQADl+MnhQeN0PLhJrspMx3qslia52ycvc=";
+      sha256 = "sha256-pcALvo+YFL/tnyl5SKGfxWdMAvnrD/cqOWxvVLcm1ZI=";
     }+"/src";
 
 

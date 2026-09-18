@@ -10,6 +10,7 @@
   virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
+    man-pages
     vscode
     docker #enable docke with virtualisation.docker.enable
     docker-compose

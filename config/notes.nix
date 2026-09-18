@@ -7,7 +7,7 @@
     mermaid-cli
     mdcat
     kdePackages.okular
-    libsForQt5.qt5.qtspeech
+    qt5.qtspeech
     pkgs.nodejs_24
 
     #customPackegaes

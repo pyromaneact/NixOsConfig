@@ -11,17 +11,38 @@
           name = "gruvbox";
           style = "dark";
         };
+        diagnostics = {
+          enable = true;
+          config = {
+            virtual_lines = true;
+          };
+        };
         lsp.enable=true;
         languages = {
           enableTreesitter = true;
 
           nix.enable = true;
-          clang.enable = true;
+          clang={
+            enable = true;
+          };
           cmake.enable = true;
         };
+        statusline.lualine.enable = true;
+        telescope.enable = true;
+        autocomplete.nvim-cmp.enable = true;
       };
     };
   };
+
+
+
+
+
+
+
+
+
+
   environment.systemPackages = with pkgs; [
     direnv
     vscode

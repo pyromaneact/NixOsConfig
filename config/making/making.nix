@@ -13,5 +13,6 @@
     prusa-slicer
     kicad
     pkgs.freerdp
+    inkscape
   ];
 }
