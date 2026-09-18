@@ -59,7 +59,7 @@
           ./config/cyberSecurity.nix
           ./config/game.nix
           ./config/vm.nix
-          ./config.pitrare.nix
+          ./config/pitrare.nix
         ];
       };
     };
