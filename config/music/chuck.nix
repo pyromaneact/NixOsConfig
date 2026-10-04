@@ -2,7 +2,6 @@
 
 pkgs.stdenv.mkDerivation{
   name = "chuck";
-  #src =  pkgs.fetchgit { url = "https://github.com/ccrma/chuck/tree/main/src"; };
 
   buildInputs = with pkgs; [
     bison

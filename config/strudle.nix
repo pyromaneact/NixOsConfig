@@ -1,12 +1,12 @@
 {pkgs, inputs, ... }:
 let
-  strudle = pkgs.vimUtils.buildVimPlugin {
+  strudel = pkgs.vimUtils.buildVimPlugin {
     pname = "strudel.nvim";
     version = "1.0.0";
     src = pkgs.fetchFromGitHub {
       owner = "gruvw";
       repo = "strudel.nvim";
-      hash = "sha256-rFVYNwNkIYqJxH6bSNmXJ/e2T919NTeH+Uz1nF/JC+0=";
+      hash = pkgs.lib.fakeHash;
       fetchSubmodules = true;
     };
   };
@@ -14,15 +14,11 @@ in
 {      
 
   programs.nvf ={
-    config.vim.lazy.plugins = {
-      package = strudle;
-      setupModule = "strudel/init.lua";
-      load = ""
+    config.vim.extraPlugins = {
+      package = strudel;
+      setup = "require('strudel').setup()";
+      after = ["strudel"];
 
-      build = "npm ci";
-      config = ''' function()
-        require("strudel").setup()
-        end ''';
     };
   };
 

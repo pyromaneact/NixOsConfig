@@ -1,5 +1,4 @@
 {pkgs, inputs, ... }:
-
 {
 
   programs.nvf ={
@@ -35,13 +34,13 @@
   };
 
 
-
-
-
-
-
-
-
+  config.vim.lazy.plugins = {
+    "sbatin/platformio.nvim" = {
+      package = platformio-nvim;
+      setupModule = platformio;
+      dependencies = { "numToStr/FTerm.nvim" };
+    };
+    
 
   environment.systemPackages = with pkgs; [
     direnv
