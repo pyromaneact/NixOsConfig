@@ -39,7 +39,6 @@
           #./config/genericPackage.nix
 
           #settings configs
-          ./config/alias.nix
           ./config/laptopDrivers.nix
           ./config/terminal.nix
           ./config/usr.nix

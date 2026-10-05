@@ -1,7 +1,20 @@
 {pkgs, inputs, ... }:
+let
+  platformio-nvim = pkgs.vimUtils.buildVimPlugin {
+    pname = "platformio.nvim";
+    version = "1.0.0";
+    src = pkgs.fetchFromGitHub {
+      owner = "sbatin";
+      repo = "platformio.nvim";
+      rev = "546e1e0b5afdd970f140d0ccaf322d41c0f23941";
+      hash = "sha256-PXsuhYmI3uLwjFZgSlliya2YlMWPRHTHKiUGSOJ6/ig=";
+      fetchSubmodules = true;
+    };
+  };
+in
 {
 
-  programs.nvf ={
+  config.programs.nvf ={
     enable = true;
     settings = {
       vim = {
@@ -26,23 +39,22 @@
           };
           cmake.enable = true;
         };
+        lazy.plugins = {
+          "platformio.nvim" = {
+            package = platformio-nvim;
+            setupModule = "platformio";
+          };
+        };
         statusline.lualine.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
       };
+
     };
   };
-
-
-  config.vim.lazy.plugins = {
-    "sbatin/platformio.nvim" = {
-      package = platformio-nvim;
-      setupModule = platformio;
-      dependencies = { "numToStr/FTerm.nvim" };
-    };
     
 
-  environment.systemPackages = with pkgs; [
+  config.environment.systemPackages = with pkgs; [
     direnv
     vscode
     pkgs.gdb
@@ -55,7 +67,7 @@
     ]
     ))
   ];
-  services.udev.packages = [ 
+  config.services.udev.packages = [ 
     pkgs.platformio-core
     pkgs.openocd
   ];
